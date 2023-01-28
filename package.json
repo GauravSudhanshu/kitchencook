@@ -1,0 +1,33 @@
+{
+  "name": "kitchencook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GauravSudhanshu/kitchencook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GauravSudhanshu/kitchencook/issues"
+  },
+  "homepage": "https://github.com/GauravSudhanshu/kitchencook#readme",
+  "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "axios": "^1.2.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "framer-motion": "^8.5.4",
+    "mongoose": "^6.9.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2"
+  }
+}
