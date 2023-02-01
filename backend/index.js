@@ -4,21 +4,18 @@ const express = require("express")
 const cors = require("cors");
 const connect  = require("./config/db");
 const app = express();
-// const port = process.env.port
+const port = process.env.PORT
 
 
 
-app.use(express.json())
-app.use(cors())
+// app.use(express.json())
+// app.use(cors())
 
 
-app.listen(3030,async() =>{
-    try{
+app.listen(port,() =>{
+    
         
-        console.log(`Running At https://localhost:3030`)
-    }
-    catch(e){
-console.log(e.message)
-    }
+        console.log(`Running At https://localhost:${port}`)
+
     
 })
