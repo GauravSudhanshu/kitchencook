@@ -11,7 +11,12 @@ const port = process.env.PORT
 // app.use(express.json())
 // app.use(cors())
 
+app.get("/",()=>{
+res.status("200").json({
+    message:"Hello"
+})
 
+})
 app.listen(port,() =>{
     
         
