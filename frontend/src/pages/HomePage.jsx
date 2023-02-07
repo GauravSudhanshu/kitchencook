@@ -1,14 +1,13 @@
-import {  Popover, PopoverTrigger, Text, Image, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, Button } from "@chakra-ui/react";
+import {  Popover, PopoverTrigger, Text, Image, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, Button, LinkBox } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import "../pages/HomePage.css";
-import TopNavbar from "../components/Navbar/TopNavbar";
 import logo from "../assets/logo.jpg";
-import { Navigate, useNavigate } from "react-router-dom";
-import { Search2Icon } from "@chakra-ui/icons";
+
 import login from "../assets/login.jpg"
 import truck from "../assets/truck.png"
 import cart from "../assets/cart.jpg"
-import { Categories_Data } from "../assets/Data";
+
+import Sliding from "../components/Sliding/Sliding";
 import { Link } from "react-router-dom";
 
 
@@ -58,10 +57,14 @@ const HomePage = () => {
           />
         </div>
         <div className="div_three_container">
+        <Link to="/login">
         <div className="entry">
         <img src={login} alt="login icon" />
-        <p>Login</p>
+        <p>Login</p> 
         </div>
+        </Link>
+        
+        
         <div className="entry">
         <img src={truck} alt="truck icon" />
         <p>Your Order</p>
@@ -75,6 +78,7 @@ const HomePage = () => {
       <div className="category_container">
        
       </div>
+      <Sliding/>
     </>
   );
 };
