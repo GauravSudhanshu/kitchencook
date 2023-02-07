@@ -17,10 +17,15 @@ res.status("200").json({
 })
 
 })
-app.listen(port,() =>{
-    
+app.listen(port,async() =>{
+    try{
         
         console.log(`Running At https://localhost:${port}`)
+    }catch(e){
+        console.log(e.message)
+    }
+        
+        
 
     
 })

@@ -4,6 +4,4 @@ const connect = () => {
     return mongoose.connect(process.env.URL)
 }
 
-module.exports={
-    connect
-}
+module.exports= connect
