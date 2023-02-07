@@ -38,13 +38,22 @@ app.post("/login",async(req,res)=>{
         
         console.log(user)
         if(user){
-            bcrypt.compare
+            bcrypt.compare(password,user.password,(err,result) =>{
+                if(result){
+                    let token = jwt.sign({id:user.id,role:user.role,email:user.email,name:user.name},key)
+                    res.send({msg:"Login Succesfull" , CookwareToken :token ,userData:{name:user.name,role:user.role,id:user.id}})
+                }else{
+                    res.send("Wrong Credential")
+                }
+            })
         }
-        res.send("Login Succesfull")
+        else{
+            res.send("Please Register First")
+        }
     }
     catch(err){
-    console.log("Cannot Connect")
-    console.log(err)
+    console.log(e.message)
+    res.send(e.message)
 }
 })
 
