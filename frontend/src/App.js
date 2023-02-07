@@ -1,12 +1,16 @@
 
+
 import { Box } from '@chakra-ui/react';
 import './App.css';
+import HomePage from './pages/HomePage';
+import AllRoutes from './routes/AllRoutes';
+
 
 function App() {
   return (
-    <Box>
-      <h1>All Routes</h1>
-    </Box>
+   <div>
+   <HomePage/>
+   </div>
   );
 }
 
